@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vampire Frog</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start; /* Alineamos hacia arriba */
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+      background-image: url('./assets/green-background.png'); /* Aquí agregas la URL de la imagen de sangre */
+      background-size: cover; /* Cubre toda la pantalla */
+      background-position: center;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: white;
+      animation:rotate 5s linear infinite;
+      margin: auto;
+      margin-top: 100px;
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .image-container {
+      text-align: center;
+      margin: auto;
+    }
+
+    .image-container img {
+      max-width: 80%; /* Ajusta el tamaño de la imagen */
+      height: auto;
+      border: 5px solid white; /* Bordes blancos alrededor de la imagen */
+      border-radius: 10px; /* Bordes redondeados */
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1.2em;
+      color: white;
+      background-color: #333;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 40px;
+      margin-left: 1000px;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>NerDoggo</h1>
+
+  <div class="image-container">
+    <img src="./assets/e5b98110fcd62d6ebe0e636262170175.jpg" alt="Vampire Frog Image"> <!-- Cambia esta URL con la imagen que desees -->
+  </div>
+
+  <button id="soundButton">Click Me!</button>
+
+  <audio id="soundEffect" src="./assets/Blue Lobster Jumpscare Meme Sound (HD)  Toccata and Fugue in D Minor Song.mp3" preload="auto"></audio> <!-- Sonido de ejemplo -->
+
+  <script>
+    // Obtén el botón y el audio
+    const button = document.getElementById('soundButton');
+    const soundEffect = document.getElementById('soundEffect');
+
+    // Función para reproducir el sonido cuando se hace clic en el botón
+    button.addEventListener('click', () => {
+      soundEffect.play();
+    });
+  </script>
+
+</body>
+</html>
